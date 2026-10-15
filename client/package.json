@@ -1,0 +1,26 @@
+{
+  "name": "hospital-website-client",
+  "version": "1.0.0",
+  "description": "Public website for the hospital (React + Vite)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && node scripts/generate-seo-files.mjs",
+    "preview": "vite preview",
+    "test": "node --test \"tests/**/*.test.js\""
+  },
+  "dependencies": {
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/public-sans": "^5.3.0",
+    "hospital-website": "file:..",
+    "lucide-react": "^1.57.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-router-dom": "^7.18.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.4"
+  },
+  "private": true,
+  "type": "module"
+}

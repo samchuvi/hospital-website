@@ -1,0 +1,64 @@
+/* Design tokens — adjust these to match the hospital's brand colours. */
+:root {
+  /* Brand */
+  --brand: #0b5c6e;          /* deep teal — primary actions */
+  --brand-strong: #084655;
+  --brand-ink: #0b3a53;      /* deep navy-teal for headings, footer */
+  --brand-soft: #e3f1f2;
+  --accent: #3fb6a8;         /* fresh teal-mint accent */
+  --accent-soft: #e6f6f3;
+  --sky: #dcebf5;
+
+  /* Neutrals */
+  --bg: #f6f8f7;
+  --surface: #ffffff;
+  --surface-2: #f0f4f4;
+  --line: #dbe4e5;
+  --line-strong: #c3d0d2;
+  --text: #1c2b33;
+  --text-muted: #51636c;
+  --text-inverse: #f4fafa;
+
+  /* Status */
+  --danger: #b42318;
+  --danger-soft: #fdecea;
+  --success: #12704a;
+  --success-soft: #e5f4ec;
+  --warning: #8a5300;
+  --warning-soft: #fff4dc;
+  --info: #1d5f8f;
+  --info-soft: #e8f1f9;
+  --pending: #8a4b00;
+  --pending-soft: #fff1d6;
+
+  /* Type */
+  --font-sans: 'Public Sans Variable', 'Segoe UI', system-ui, -apple-system, Roboto, Arial, sans-serif;
+  --font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --fs-xs: 0.8125rem;
+  --fs-sm: 0.9375rem;
+  --fs-base: 1.0625rem;
+  --fs-lg: 1.1875rem;
+  --fs-xl: clamp(1.35rem, 1.1rem + 0.9vw, 1.6rem);
+  --fs-2xl: clamp(1.7rem, 1.3rem + 1.6vw, 2.35rem);
+  --fs-3xl: clamp(2.1rem, 1.5rem + 2.6vw, 3.4rem);
+
+  /* Space & shape */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+  --shadow-sm: 0 1px 2px rgb(16 42 52 / 6%), 0 1px 3px rgb(16 42 52 / 6%);
+  --shadow: 0 2px 6px rgb(16 42 52 / 5%), 0 10px 28px rgb(16 42 52 / 8%);
+  --shadow-lg: 0 18px 50px rgb(11 58 83 / 16%);
+  --container: 1200px;
+  --header-h: 76px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --focus: 0 0 0 3px #fff, 0 0 0 5px #1a73b8;
+}

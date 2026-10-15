@@ -1,0 +1,12 @@
+{
+  "name": "hospital-website",
+  "private": true,
+  "description": "Public hospital website (React + Vite) with an Express API for appointment and contact requests",
+  "scripts": {
+    "install:all": "npm --prefix client install && npm --prefix server install",
+    "dev:client": "npm --prefix client run dev",
+    "dev:server": "npm --prefix server run dev",
+    "build": "npm --prefix client run build",
+    "test": "npm --prefix server test && npm --prefix client test"
+  }
+}
