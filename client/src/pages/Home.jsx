@@ -6,6 +6,7 @@ import Section from '../components/Section.jsx';
 import ServiceCard from '../components/ServiceCard.jsx';
 import DoctorCard from '../components/DoctorCard.jsx';
 import Photo from '../components/Photo.jsx';
+import HeroCarousel from '../components/HeroCarousel.jsx';
 import Pending from '../components/Pending.jsx';
 import CtaBand from '../components/CtaBand.jsx';
 import ContactDetails from '../components/ContactDetails.jsx';
@@ -83,7 +84,7 @@ function Hero() {
         </div>
 
         <div className="hero__visual">
-          <Photo src={hospital.gallery[0]?.src} alt={hospital.gallery[0]?.alt} label="Hospital building or reception" ratio="4 / 5" eager className="hero__photo" />
+          <HeroCarousel slides={hospital.carousel} className="hero__photo" />
           <div className="hero__card">
             <span className="hero__card-icon">
               <CalendarCheck size={22} aria-hidden="true" />

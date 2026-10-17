@@ -84,6 +84,14 @@ export const hospital = {
   // Example: { src: '/images/gallery/reception.jpg', alt: 'Main reception', category: 'Reception' }
   gallery: [],
 
+  // Photos that slide automatically in the homepage hero (3–6 works best).
+  // Put files in client/public/images/carousel/. Leave empty to show
+  // labelled placeholder slides. Landscape or portrait both work; they are
+  // cropped to fill the frame, so keep the main subject in the centre.
+  // Example:
+  // { src: '/images/carousel/building.jpg', alt: 'Front of the hospital building', caption: 'Our hospital' },
+  carousel: [],
+
   // Public website address once known, without trailing slash. Also set
   // VITE_SITE_URL in the deployment so the sitemap and canonical tags work.
   siteUrl: import.meta.env.VITE_SITE_URL || null,
