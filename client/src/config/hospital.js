@@ -1,219 +1,263 @@
 /*
- * ============================================================================
- *  HOSPITAL INFORMATION — EDIT THIS FILE TO CUSTOMISE THE WEBSITE
- * ============================================================================
- *
- *  Every hospital-specific detail lives here. Leave a value as `null` (or an
- *  empty list) until the hospital has CONFIRMED it in writing. The website
- *  then shows a clearly marked "to be confirmed" placeholder instead of
- *  inventing anything, and hides features that depend on it (call buttons,
- *  WhatsApp, map, structured data).
- *
- *  Before publishing:
- *    1. Fill in the confirmed details below.
- *    2. Set `verified: true` on each service the hospital actually offers.
- *    3. Set `draftMode: false` to remove the preview banner and draft badges.
- * ============================================================================
+ * BYHARWANGA MEDICAL CENTER
+ * Website configuration
  */
 
 export const hospital = {
-  // Shows a "preview draft" banner and draft badges on unconfirmed content.
-  draftMode: true,
+  draftMode: false,
 
-  name: null, // e.g. 'St. Example Hospital'
-  shortName: null, // e.g. 'St. Example' — used in tight spaces
-  tagline: null, // e.g. 'Quality care for every family'
-  logo: null, // e.g. '/images/logo.svg' (place file in client/public/images)
+  name: 'Byharwanga Medical Center',
+  shortName: 'Byharwanga Medical Center',
+  tagline: 'Equity in Practice',
+  logo: null,
 
   contact: {
-    phone: null, // e.g. '+256 700 000000' — displayed as written
+    phone: '0752884347',
     phoneSecondary: null,
-    whatsapp: null, // international format, digits only, e.g. '256700000000'
-    email: null, // e.g. 'info@yourhospital.ug'
+    whatsapp: '256752884347',
+    email: 'Byhhrwangamedical@gmail.com',
   },
 
   address: {
-    line1: null, // e.g. 'Plot 00, Example Road'
-    area: null, // e.g. 'Ntinda'
-    city: null, // e.g. 'Kampala'
-    region: null, // e.g. 'Central Region'
+    line1: null,
+    area: 'Ganda',
+    city: 'Nansana',
+    region: 'Kampala',
     country: 'Uganda',
-    landmark: null, // e.g. 'Opposite the Example Shopping Centre'
+    landmark: null,
   },
 
   location: {
-    // Only fill these in from the hospital's VERIFIED Google Maps listing.
-    // Google Maps → search the hospital → Share → "Embed a map" → copy the
-    // src="..." URL into mapEmbedUrl. Copy the "Send a link" URL into mapLink.
     mapEmbedUrl: null,
     mapLink: null,
     latitude: null,
     longitude: null,
   },
 
-  // Confirmed opening hours. Leave empty until verified.
-  // Example: [{ days: 'Monday – Friday', hours: '8:00 AM – 6:00 PM' }]
-  openingHours: [],
-  // Only set if the hospital confirms a 24-hour service, e.g. 'Emergency: open 24 hours'.
-  emergencyNote: null,
+  openingHours: [
+    {
+      days: 'Monday - Sunday',
+      hours: 'Open 24 Hours',
+    },
+  ],
 
-  // Only add links the hospital actually owns.
-  // Example: [{ label: 'Facebook', url: 'https://facebook.com/yourhospital' }]
+  emergencyNote: null,
   social: [],
 
   about: {
-    overview: null, // 2–4 sentences describing the hospital
-    mission: null,
-    vision: null,
-    values: [], // e.g. [{ title: 'Compassion', text: '...' }]
-    history: null, // e.g. 'Founded in 20XX ...'
-    facilities: [], // verified facilities, e.g. ['Laboratory', 'Pharmacy', 'Maternity ward']
+    overview:
+      'Welcome to Byharwanga Medical Center. Located in Ganda, Nansana, Uganda, our goal is to help individuals and families access healthcare information and learn about available medical services. Our guiding principle is Equity in Practice.',
+
+    mission:
+      'To promote equitable access to healthcare and treat every individual with dignity, respect, and compassion.',
+
+    vision:
+      'To contribute to a community where people can access healthcare information and seek appropriate medical support when they need it.',
+
+    values: [
+      {
+        title: 'Equity',
+        text: 'Promoting fairness and respect in access to healthcare.',
+      },
+      {
+        title: 'Compassion',
+        text: 'Recognising the importance of treating every patient with dignity and care.',
+      },
+      {
+        title: 'Professionalism',
+        text: 'Encouraging responsible communication and patient-centred care.',
+      },
+      {
+        title: 'Respect',
+        text: 'Valuing every individual and their healthcare needs.',
+      },
+    ],
+
+    history:
+      'More information about the history of Byharwanga Medical Center will be added when provided by the management.',
+
+    facilities: [
+      'Medical facilities',
+      'Maternity facilities',
+    ],
   },
 
-  // Confirmed medical staff ONLY. Never add names or credentials that the
-  // hospital has not provided and approved for publication.
-  // Example:
-  // { name: 'Dr. Jane Example', qualifications: 'MBChB, MMed (Paediatrics)',
-  //   specialty: 'Paediatrician', department: 'Child Health',
-  //   photo: '/images/doctors/jane.jpg', availability: 'Mon, Wed, Fri' }
   doctors: [],
 
-  // Photographs the hospital has authorised for use. Put files in
-  // client/public/images/gallery/ and list them here. Do not include
-  // identifiable patients without their written consent.
-  // Example: { src: '/images/gallery/reception.jpg', alt: 'Main reception', category: 'Reception' }
-  gallery: [],
+  gallery: [
+    {
+      src: '/images/gallery/medical-consultation.jpg',
+      alt: 'Illustrative photograph of a healthcare consultation',
+      category: 'Healthcare',
+    },
+    {
+      src: '/images/gallery/modern-clinic.jpg',
+      alt: 'Illustrative photograph of a clinical environment',
+      category: 'Facilities',
+    },
+    {
+      src: '/images/gallery/medical-team.jpg',
+      alt: 'Illustrative photograph of healthcare professionals',
+      category: 'Healthcare',
+    },
+    {
+      src: '/images/gallery/patient-care.jpg',
+      alt: 'Illustrative photograph representing patient care',
+      category: 'Patient Care',
+    },
+  ],
 
-  // Photos that slide automatically in the homepage hero (3–6 works best).
-  // Put files in client/public/images/carousel/. Leave empty to show
-  // labelled placeholder slides. Landscape or portrait both work; they are
-  // cropped to fill the frame, so keep the main subject in the centre.
-  // Example:
-  // { src: '/images/carousel/building.jpg', alt: 'Front of the hospital building', caption: 'Our hospital' },
-  carousel: [],
+  carousel: [
+    {
+      src: '/images/carousel/hero-hospital.jpg',
+      alt: 'Illustrative photograph of a healthcare environment',
+      caption: 'Equity in Practice',
+    },
+    {
+      src: '/images/carousel/hero-doctor.jpg',
+      alt: 'Illustrative photograph of a doctor',
+      caption: 'Healthcare with Dignity and Respect',
+    },
+    {
+      src: '/images/carousel/hero-care.jpg',
+      alt: 'Illustrative photograph representing patient care',
+      caption: 'Your Health Matters',
+    },
+  ],
 
-  // Public website address once known, without trailing slash. Also set
-  // VITE_SITE_URL in the deployment so the sitemap and canonical tags work.
   siteUrl: import.meta.env.VITE_SITE_URL || null,
 };
 
-/*
- * Services. Descriptions are deliberately general and make no clinical
- * claims. Set `verified: true` only for services the hospital confirms.
- * Unverified services are labelled as drafts while draftMode is true and
- * are HIDDEN when draftMode is false.
- */
 export const services = [
   {
-    slug: 'outpatient',
-    title: 'Outpatient services',
+    slug: 'general-medical-care',
+    title: 'General Medical Services',
     icon: 'Stethoscope',
-    summary: 'Consultations and follow-up visits for patients who do not need to stay overnight.',
-    verified: false,
-  },
-  {
-    slug: 'consultations',
-    title: 'Medical consultations',
-    icon: 'ClipboardList',
-    summary: 'Assessment and advice from clinicians for a wide range of general health concerns.',
-    verified: false,
-  },
-  {
-    slug: 'laboratory',
-    title: 'Laboratory services',
-    icon: 'Microscope',
-    summary: 'Collection and testing of samples to support diagnosis and treatment decisions.',
-    verified: false,
-  },
-  {
-    slug: 'diagnostics',
-    title: 'Diagnostic imaging',
-    icon: 'ScanLine',
-    summary: 'Imaging examinations requested by clinicians to help understand a patient’s condition.',
+    summary:
+      'Contact the medical center to enquire about available general medical services.',
     verified: false,
   },
   {
     slug: 'maternity',
-    title: 'Maternity services',
+    title: 'Maternity Services',
     icon: 'HeartPulse',
-    summary: 'Care for mothers before, during and after childbirth.',
+    summary:
+      'The medical center has confirmed that it provides maternity services. Contact the team for details about available care.',
+    verified: true,
+  },
+  {
+    slug: 'consultations',
+    title: 'Medical Consultations',
+    icon: 'ClipboardList',
+    summary:
+      'Contact the medical center for information about consultations and available medical care.',
+    verified: false,
+  },
+  {
+    slug: 'laboratory',
+    title: 'Laboratory Services',
+    icon: 'Microscope',
+    summary:
+      'Contact the medical center to confirm available laboratory tests and diagnostic services.',
     verified: false,
   },
   {
     slug: 'child-health',
-    title: 'Child health',
+    title: 'Child Health',
     icon: 'Baby',
-    summary: 'Healthcare for babies, children and adolescents, including routine check-ups.',
+    summary:
+      'Contact the medical center to enquire about healthcare services for children.',
     verified: false,
   },
   {
     slug: 'inpatient',
-    title: 'Inpatient care',
+    title: 'Inpatient Care',
     icon: 'BedDouble',
-    summary: 'Admission and ward-based care for patients who need to stay under observation or treatment.',
+    summary:
+      'Contact the medical center to enquire about admission and inpatient care.',
     verified: false,
   },
   {
     slug: 'pharmacy',
-    title: 'Pharmacy',
+    title: 'Pharmacy Services',
     icon: 'Pill',
-    summary: 'Dispensing of prescribed medicines with guidance on how to take them safely.',
+    summary:
+      'Contact the medical center to confirm the availability of pharmacy services.',
     verified: false,
   },
   {
     slug: 'dental',
-    title: 'Dental services',
+    title: 'Dental Services',
     icon: 'Smile',
-    summary: 'Examination and treatment for teeth and gum health.',
+    summary:
+      'Contact the medical center to confirm the availability of dental care.',
     verified: false,
   },
   {
     slug: 'emergency',
-    title: 'Emergency services',
+    title: 'Emergency Services',
     icon: 'Siren',
-    summary: 'Urgent assessment and care. Confirm availability and hours with the hospital before publishing.',
+    summary:
+      'The medical center reports operating 24 hours a day. Contact the facility directly to confirm available emergency care.',
     verified: false,
   },
 ];
 
-// ---------------------------------------------------------------------------
-// Helpers — you should not need to edit below this line.
-// ---------------------------------------------------------------------------
-
 export const PLACEHOLDER_NAME = '[Hospital Name]';
 
 export const displayName = hospital.name || PLACEHOLDER_NAME;
-export const shortName = hospital.shortName || hospital.name || PLACEHOLDER_NAME;
 
-export const visibleServices = hospital.draftMode ? services : services.filter((s) => s.verified);
+export const shortName =
+  hospital.shortName || hospital.name || PLACEHOLDER_NAME;
+
+export const visibleServices = hospital.draftMode
+  ? services
+  : services.filter((service) => service.verified);
 
 export function telHref(phone) {
   return phone ? `tel:${phone.replace(/[^\d+]/g, '')}` : null;
 }
 
 export function whatsappHref(text = '') {
-  const n = hospital.contact.whatsapp;
-  if (!n) return null;
-  const q = text ? `?text=${encodeURIComponent(text)}` : '';
-  return `https://wa.me/${n.replace(/\D/g, '')}${q}`;
+  const number = hospital.contact.whatsapp;
+
+  if (!number) return null;
+
+  const query = text ? `?text=${encodeURIComponent(text)}` : '';
+
+  return `https://wa.me/${number.replace(/\D/g, '')}${query}`;
 }
 
 export function fullAddress() {
-  const a = hospital.address;
-  const parts = [a.line1, a.area, a.city, a.country].filter(Boolean);
-  // Only the country is known → treat the address as missing.
-  return parts.length > 1 ? parts.join(', ') : null;
+  const address = hospital.address;
+
+  const parts = [
+    address.line1,
+    address.area,
+    address.city,
+    address.region,
+    address.country,
+  ].filter(Boolean);
+
+  return parts.length > 0 ? parts.join(', ') : null;
 }
 
 export function directionsHref() {
-  const loc = hospital.location;
-  if (loc.mapLink) return loc.mapLink;
-  if (loc.latitude != null && loc.longitude != null) {
-    return `https://www.google.com/maps/dir/?api=1&destination=${loc.latitude},${loc.longitude}`;
+  const location = hospital.location;
+
+  if (location.mapLink) return location.mapLink;
+
+  if (location.latitude != null && location.longitude != null) {
+    return `https://www.google.com/maps/dir/?api=1&destination=${location.latitude},${location.longitude}`;
   }
-  const addr = fullAddress();
-  if (hospital.name && addr) {
-    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${hospital.name}, ${addr}`)}`;
+
+  const address = fullAddress();
+
+  if (hospital.name && address) {
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+      `${hospital.name}, ${address}`
+    )}`;
   }
+
   return null;
 }
